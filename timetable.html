@@ -2,164 +2,121 @@
 <html>
 <head>
   <title>Weekly Timetable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color:#FF7F50;
+      margin: 0;
+      padding: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+      background-color: #fff;
+      border: 2px solid #dee2e6;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    caption {
+      caption-side: top;
+      font-size: 1.4em;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    th {
+      background-color: #800080; /* dark slate gray */
+      color: white;
+      padding: 5px;
+      text-align: center;
+      border: 1px solid #dee2e6;
+    }
+
+    td {
+      border: 1px solid #dee2e6;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .weekday {
+      background-color: #00FFFF; /* light teal */
+    }
+
+    .saturday {
+      background-color: #DFFF00; /* moccasin */
+    }
+
+    .sunday {
+      background-color: #f8c8dc; /* pink */
+    }
+  </style>
 </head>
 <body>
-  <h2>Weekly Timetable</h2>
-
-  <table border="1">
-    <caption>Time Table</caption>
-    <tr>
-      <th>Day</th>
-      <th>6:00-7:00</th>
-      <th>7:00-8:00</th>
-      <th>8:00-9:00</th>
-      <th>9:00-10:00</th>
-      <th>10:00-11:00</th>
-      <th>11:00-12:00</th>
-      <th>12:00-1:30</th>
-      <th>1:30-2:30</th>
-      <th>2:30-5:30</th>
-      <th>5:30-6:30</th>
-      <th>6:30-7:30</th>
-      <th>7:30-8:20</th>
-      <th>8:20-9:00</th>
-      <th>9:00-10:00</th>
-      <th>10:00-12:00</th>
-    </tr>
-
-    <tr>
-      <td>Monday</td>
-      <td>Wake up</td>
-      <td>Get ready</td>
-      <td>Class</td>
-      <td>Tiffin</td>
-      <td>Rest</td>
-      <td>Class</td>
-      <td>Study</td>
-      <td>Lunch</td>
-      <td>Rest</td>
-      <td>Walking</td>
-      <td>Phone calls</td>
-      <td>Class</td>
-      <td>Dinner</td>
-      <td>Revise</td>
-      <td>Phone</td>
-    </tr>
-
-    <tr>
-      <td>Tuesday</td>
-      <td>Wake up</td>
-      <td>Get ready</td>
-      <td>Class</td>
-      <td>Tiffin</td>
-      <td>Project work</td>
-      <td>Class</td>
-      <td>Study</td>
-      <td>Lunch</td>
-      <td>Rest</td>
-      <td>Exercise</td>
-      <td>Calls</td>
-      <td>Assignment</td>
-      <td>Dinner</td>
-      <td>Reading</td>
-      <td>Sleep</td>
-    </tr>
-
-    <tr>
-      <td>Wednesday</td>
-      <td>Wake up</td>
-      <td>Get ready</td>
-      <td>Class</td>
-      <td>Tiffin</td>
-      <td>Notes</td>
-      <td>Class</td>
-      <td>Group study</td>
-      <td>Lunch</td>
-      <td>Rest</td>
-      <td>Walking</td>
-      <td>Chats</td>
-      <td>Class</td>
-      <td>Dinner</td>
-      <td>Revise</td>
-      <td>Phone</td>
-    </tr>
-
-    <tr>
-      <td>Thursday</td>
-      <td>Wake up</td>
-      <td>Get ready</td>
-      <td>Class</td>
-      <td>Tiffin</td>
-      <td>Presentation</td>
-      <td>Class</td>
-      <td>Self study</td>
-      <td>Lunch</td>
-      <td>Rest</td>
-      <td>Walk</td>
-      <td>Music</td>
-      <td>Class</td>
-      <td>Dinner</td>
-      <td>Revise</td>
-      <td>Phone</td>
-    </tr>
-
-    <tr>
-      <td>Friday</td>
-      <td>Wake up</td>
-      <td>Get ready</td>
-      <td>Class</td>
-      <td>Tiffin</td>
-      <td>Discussion</td>
-      <td>Class</td>
-      <td>Practice</td>
-      <td>Lunch</td>
-      <td>Rest</td>
-      <td>Walk</td>
-      <td>Friends</td>
-      <td>Class</td>
-      <td>Dinner</td>
-      <td>Review</td>
-      <td>Sleep</td>
-    </tr>
-
-    <tr>
-      <td>Saturday</td>
-      <td>Wake late</td>
-      <td>Brunch</td>
-      <td>Cleaning</td>
-      <td>Free time</td>
-      <td>Games</td>
-      <td>Relax</td>
-      <td>Movies</td>
-      <td>Lunch</td>
-      <td>Nap</td>
-      <td>Walk</td>
-      <td>Social</td>
-      <td>Read</td>
-      <td>Dinner</td>
-      <td>Entertainment</td>
-      <td>Sleep</td>
-    </tr>
-
-    <tr>
-      <td>Sunday</td>
-      <td>Wake late</td>
-      <td>Free time</td>
-      <td>Breakfast</td>
-      <td>Reading</td>
-      <td>Relax</td>
-      <td>Family time</td>
-      <td>Shopping</td>
-      <td>Lunch</td>
-      <td>Rest</td>
-      <td>Music</td>
-      <td>Games</td>
-      <td>TV</td>
-      <td>Dinner</td>
-      <td>Plan next week</td>
-      <td>Sleep</td>
-    </tr>
-
+  <table>
+    <caption>TIME TABLE</caption>
+    <thead>
+      <tr>
+        <th>Day / Time</th>
+        <th>6–8 AM</th>
+        <th>8–9:00 AM</th>
+        <th>9:00–10:00 AM</th>
+        <th>10:00–12 PM</th>
+        <th>12–1:30 PM</th>
+        <th>1:30–2:30 PM</th>
+        <th>2:30–5:30 PM</th>
+        <th>5:30–6:30 PM</th>
+        <th>6:30–7:30 PM</th>
+        <th>7:30–8:20 PM</th>
+        <th>8:20–9 PM</th>
+        <th>9–10 PM</th>
+        <th>10 PM–12 AM</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="weekday">
+        <td>Monday</td>
+        <td>Wake Up</td><td>Go to class</td><td>Breakfast</td><td>Rest</td><td>Class</td>
+        <td>Lunch</td><td>Rest</td><td>Walking</td><td>Phone Calls</td>
+        <td>Class</td><td>Dinner</td><td>Class</td><td>Sleep</td>
+      </tr>
+      <tr class="weekday">
+        <td>Tuesday</td>
+        <td>Wake Up</td><td>Go to class</td><td>Breakfast</td><td>Rest</td><td>Class</td>
+        <td>Lunch</td><td>Rest</td><td>Walking</td><td>Phone Calls</td>
+        <td>Class</td><td>Dinner</td><td>Class</td><td>Sleep</td>
+      </tr>
+      <tr class="weekday">
+        <td>Wednesday</td>
+        <td>Wake Up</td><td>Go to class</td><td>Breakfast</td><td>Rest</td><td>Class</td>
+        <td>Lunch</td><td>Rest</td><td>Walking</td><td>Phone Calls</td>
+        <td>Class</td><td>Dinner</td><td>Class</td><td>Sleep</td>
+      </tr>
+      <tr class="weekday">
+        <td>Thursday</td>
+        <td>Wake Up</td><td>Go to class</td><td>Breakfast</td><td>Rest</td><td>Class</td>
+        <td>Lunch</td><td>Rest</td><td>Walking</td><td>Phone Calls</td>
+        <td>Class</td><td>Dinner</td><td>Class</td><td>Sleep</td>
+      </tr>
+      <tr class="weekday">
+        <td>Friday</td>
+        <td>Wake Up</td><td>Go to class</td><td>Breakfast</td><td>Rest</td><td>Class</td>
+        <td>Lunch</td><td>Rest</td><td>Walking</td><td>Phone Calls</td>
+        <td>Class</td><td>Dinner</td><td>Class</td><td>Sleep</td>
+      </tr>
+      <tr class="saturday">
+        <td>Saturday</td>
+        <td>Sleeping</td><td>Sleeping</td><td>Breakfast</td><td>Class</td><td>Break</td>
+        <td>Lunch</td><td>Rest</td><td>Walking</td><td>Class</td>
+        <td>Phone Calls</td><td>Dinner</td><td>Class</td><td>Rest</td>
+      </tr>
+      <tr class="sunday">
+        <td>Sunday</td>
+        <td>Sleeping</td><td>Sleeping</td><td>Breakfast</td><td>Class</td><td>Break</td>
+        <td>Lunch</td><td>Rest</td><td>Walking</td><td>Class</td>
+        <td>Phone Calls</td><td>Dinner</td><td>Class</td><td>Rest</td>
+      </tr>
+    </tbody>
   </table>
 </body>
 </html>
